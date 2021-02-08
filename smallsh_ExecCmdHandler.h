@@ -18,7 +18,7 @@ void cleanUpPidList() {
                 }
                 else {
                     fprintf(stdout, "Background pid %d terminated by signal %d\n", 
-                        BG_PIDS[i], WTERMSIG(STAT_LAST_FG_PROCESS));
+                        BG_PIDS[i], WTERMSIG(childStatus));
                     fflush(stdout);
                 }
                 // Remove it from the list
